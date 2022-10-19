@@ -7,7 +7,7 @@
 
 body{
     display: flex;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(77, 75, 75);
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -92,8 +92,8 @@ body{
 .card .box::after{
     content: '';
     position: absolute;
-    inset: 3px;
-    background: #292929;
+    inset: 2px;
+    background: #000;
 }
 .card .box img{
     position: absolute;
@@ -102,7 +102,7 @@ body{
     z-index: 1;
     width: calc(100% - 20px);
     height: calc(100% - 20px);
-    filter: grayscale(0.5);
+    filter: grayscale(0.1);
 }
 .card .content{
     position: absolute;
@@ -144,6 +144,11 @@ body{
     color: #ffd700;
     line-height: 1.2em;
     font-weight: 600;
+    transition: 0.7s;
+    cursor: pointer;
+}
+.card .content .details .data h3:hover{
+    font-size: 1.5em;
 }
 .card .content .details .data h3 span{
     font-size: 0.85em;
@@ -157,13 +162,13 @@ body{
 }
 .card .content .details .linkBtn button{
     padding: 10px 30px;
-    border: none;
     outline: none;
+    background-color: transparent;
     border-radius: 5px;
     font-size: 1em;
     font-weight: 500;
-    background:#ffd700;
-    color: #222;
+    border:2px solid #ffd700;
+    color: #ffd700;
     cursor: pointer;
     opacity: 0.7;
 }

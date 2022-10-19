@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body{
+    background-color: #23242a;
+    min-width: 100vh;
+}
+
+nav{
+    width: 100%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 2em;
+    color: #fff;
+    margin-left: 25px;
+    font-weight: 600;
+}
+.links li{
+    display: inline-block;
+    list-style: none;
+    padding: 25px 7px;
+    margin-right: 25px;
+    color: #fff;
+}
+.links a{
+    text-decoration: none;
+}
+.links li:hover{
+    background-color: #fff;
+    color: #000;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    position: relative;
+    background: #1c1c1c;
+    height: 380px;
+    width: 420px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(transparent,#f7ef8a,#f7ef8a,transparent);
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(transparent,#f7ef8a,#f7ef8a,transparent);
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.form{
+    position: absolute;
+    z-index: 10;
+    background-color: #28292d;
+    inset: 2px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+}
+.form h2{
+    margin-top: 15px;
+}
+.form form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.form input, textarea{
+    width: 75%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #f7ef8a;
+    color: #fff;
+    outline: none;
+    padding: 8px 20px;
+    font-size: 1em;
+    margin-top: 25px;
+    border-radius: 8px;
+}
+.form input::placeholder, textarea::placeholder{
+    color: #fff;
+    opacity: 0.8;
+}
+input[type="submit"]{
+    background-color: #ffd700;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 11px 25px;
+    width: 100px;
+    border-radius: 4px;
+}
+input[type="submit"]:active{
+    opacity: 0.7;
+}
+
